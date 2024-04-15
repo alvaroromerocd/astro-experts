@@ -1,0 +1,238 @@
+---
+import Image from "astro/components/Image.astro";
+---
+
+<div id="experts-section">
+    <div class="experts-section-background">
+        <div class="titulos">
+            <div>
+                <h1>APRENDE DE LOS <span>MEJORES EXPERTOS</span></h1>
+            </div>
+            <div class="dental">
+                <h2>
+                    Impulsa tu clínica<br>
+                    Domina el sector dental
+                </h2>
+            </div>
+        </div>
+        <div class="images">
+            <div class="expert">
+                <div class="card">
+                    <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
+                    <span>Ismael Cerezo</span>
+                </div>
+                <div class="position">
+                    <p>
+                        CEO / DIRECTOR MÉDICO <br>
+                        FUNDADOR DE CLÍNICAS CLEARDENT
+                    </p>
+                </div>
+                <div class="line">
+
+                </div>
+            </div>
+            <div class="expert">
+                <div class="card">
+                    <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
+                    <span>Ismael Cerezo</span>
+                </div>
+                <div class="position">
+                    <p>
+                        CEO / DIRECTOR MÉDICO <br>
+                        FUNDADOR DE CLÍNICAS CLEARDENT
+                    </p>
+                </div>
+                <div class="line">
+
+                </div>
+            </div>
+            <div class="expert">
+                <div class="card">
+                    <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
+                    <span>Ismael Cerezo</span>
+                </div>
+                <div class="position">
+                    <p>
+                        CEO / DIRECTOR MÉDICO <br>
+                        FUNDADOR DE CLÍNICAS CLEARDENT
+                    </p>
+                </div>
+                <div class="line">
+
+                </div>
+            </div>
+            <div class="expert">
+                <div class="card">
+                    <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
+                    <span>Ismael Cerezo</span>
+                </div>
+                <div class="position">
+                    <p>
+                        CEO / DIRECTOR MÉDICO <br>
+                        FUNDADOR DE CLÍNICAS CLEARDENT
+                    </p>
+                </div>
+                <div class="line">
+
+                </div>
+            </div>
+            <div class="expert">
+                <div class="card">
+                    <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
+                    <span>Ismael Cerezo</span>
+                </div>
+                <div class="position">
+                    <p>
+                        CEO / DIRECTOR MÉDICO <br>
+                        FUNDADOR DE CLÍNICAS CLEARDENT
+                    </p>
+                </div>
+                <div class="line">
+
+                </div>
+            </div>
+            <div class="expert">
+                <div class="card">
+                    <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
+                    <span>Ismael Cerezo</span>
+                </div>
+                <div class="position">
+                    <p>
+                        CEO / DIRECTOR MÉDICO <br>
+                        FUNDADOR DE CLÍNICAS CLEARDENT
+                    </p>
+                </div>
+                <div class="line">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    @import url('https://fonts.cdnfonts.com/css/druk-wide-bold');
+    #experts-section{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        /* max-width: 100vh; */
+        position: relative;
+    }
+
+    .experts-section-background{
+        /* height: 100%; */
+        height: auto;
+        /* background: rgb(16,24,34); */
+        background: linear-gradient(rgba(16,24,34,1), rgba(3,5,11,1));
+        border-radius: 48px;
+        padding: 100px;
+        /* margin: 100px; */
+    }
+
+    /* .titulos{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        height: 10%;
+        position: relative;
+        padding-bottom: 5%;
+    } */
+
+    .titulos{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        height: 10%;
+        position: relative;
+        padding-bottom: 1em;
+    }
+
+    .images{
+        /* display: grid;
+        grid-template-columns: 30% 30% 30%; */
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .titulos>div{
+        width: 35%;
+    }
+
+    /* .titulos:first-child{
+        width: 40%;
+    } */
+
+    /* .titulos:last-child{
+        width: 60%;
+    } */
+
+    .expert{
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        /* background: rgb(42,61,67);
+        background: linear-gradient(180deg, rgba(42,61,67,0.499124649859944) 0%, rgba(19,41,49,1) 100%); */
+        /* background: linear-gradient(270deg, rgb(42,61,67 / .1) 0%, rgb(19,41,49 / 1) 100%); */
+        /* background: linear-gradient(180deg, rgba(42, 61, 67, 0%), rgba(19, 41, 49, 50%)); */
+        background: linear-gradient(0deg,   rgba(42, 61, 67, 100%), transparent 50%);
+        border-bottom-right-radius: 38px;
+        border-bottom-left-radius: 38px;
+        font-weight: bolder;
+    }
+
+    .card span{
+        color: rgb(179, 178, 178);
+        padding: 10px;
+        font-weight: bolder;
+        font-size: larger;
+        font-variant-caps: all-small-caps;
+    }
+
+    .position{
+        font-size: small;
+        text-align: center;
+        color: rgb(70, 186, 184);
+        padding: 10px;
+    }
+
+    .line{
+        height: 1px;
+        background-color: rgb(173, 173, 173);
+        width: 50px;
+        margin-bottom: 10px;
+    }
+
+    .dental{
+        display: flex;
+        flex-direction: row-reverse;
+        /* position: relative; */
+    }
+
+    .dental h2{
+        position: absolute;
+        bottom: 5px;
+        color: rgb(70, 186, 184);
+        display: flex;
+        text-align: end;
+    }
+
+    h1{
+        font-family: 'Druk Wide Bold', sans-serif;
+        font-size:2em;
+        color: rgb(240, 240, 240);
+
+    }
+
+    h1 span{
+        color: rgb(70, 186, 184);
+    }
+
+</style>
