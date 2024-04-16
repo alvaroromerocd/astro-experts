@@ -1,0 +1,59 @@
+---
+import Image from "astro/components/Image.astro"
+---
+
+<div class="expert">
+    <div class="card">
+        <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
+        <span>Ismael Cerezo</span>
+    </div>
+    <div class="position">
+        <p>
+            CEO / DIRECTOR MÉDICO <br>
+            FUNDADOR DE CLÍNICAS CLEARDENT
+        </p>
+    </div>
+    <div class="line">
+</div>
+
+<style>
+    .expert{
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: linear-gradient(0deg,   rgba(42, 61, 67, 100%), transparent 50%);
+        border-bottom-right-radius: 38px;
+        border-bottom-left-radius: 38px;
+        font-weight: bolder;
+    }
+
+    .card span{
+        color: rgb(179, 178, 178);
+        padding: 10px;
+        font-weight: bolder;
+        font-size: larger;
+        font-variant-caps: all-small-caps;
+    }
+
+    .position{
+        font-size: small;
+        text-align: center;
+        color: rgb(70, 186, 184);
+        padding: 10px;
+    }
+
+    .line{
+        height: 1px;
+        background-color: rgb(173, 173, 173);
+        width: 50px;
+        margin-bottom: 10px;
+    }
+</style>

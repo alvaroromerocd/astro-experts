@@ -1,5 +1,8 @@
 ---
 import Image from "astro/components/Image.astro";
+import { lazy } from "astro/zod";
+import Expert from "./Expert.astro";
+const { position = ["CEO / Director Médico <br> Fundador Clínicas ClearDent","CEO / Director Médico <br> Fundador Clínicas ClearDent","CEO / Director Médico <br> Fundador Clínicas ClearDent","CEO / Director Médico <br> Fundador Clínicas ClearDent","CEO / Director Médico <br> Fundador Clínicas ClearDent",""], name = ["Ismael Cerezo", "Jose Quesada", "Guillermo del Pino", "Fernando Jiménez", "Álvaro Sánchez", "Y más ponentes sorpresa referentes del ámbito odontológico y empresarial"] } = Astro.props;
 ---
 
 <div id="experts-section">
@@ -16,96 +19,12 @@ import Image from "astro/components/Image.astro";
             </div>
         </div>
         <div class="images">
-            <div class="expert">
-                <div class="card">
-                    <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
-                    <span>Ismael Cerezo</span>
-                </div>
-                <div class="position">
-                    <p>
-                        CEO / DIRECTOR MÉDICO <br>
-                        FUNDADOR DE CLÍNICAS CLEARDENT
-                    </p>
-                </div>
-                <div class="line">
-
-                </div>
-            </div>
-            <div class="expert">
-                <div class="card">
-                    <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
-                    <span>Ismael Cerezo</span>
-                </div>
-                <div class="position">
-                    <p>
-                        CEO / DIRECTOR MÉDICO <br>
-                        FUNDADOR DE CLÍNICAS CLEARDENT
-                    </p>
-                </div>
-                <div class="line">
-
-                </div>
-            </div>
-            <div class="expert">
-                <div class="card">
-                    <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
-                    <span>Ismael Cerezo</span>
-                </div>
-                <div class="position">
-                    <p>
-                        CEO / DIRECTOR MÉDICO <br>
-                        FUNDADOR DE CLÍNICAS CLEARDENT
-                    </p>
-                </div>
-                <div class="line">
-
-                </div>
-            </div>
-            <div class="expert">
-                <div class="card">
-                    <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
-                    <span>Ismael Cerezo</span>
-                </div>
-                <div class="position">
-                    <p>
-                        CEO / DIRECTOR MÉDICO <br>
-                        FUNDADOR DE CLÍNICAS CLEARDENT
-                    </p>
-                </div>
-                <div class="line">
-
-                </div>
-            </div>
-            <div class="expert">
-                <div class="card">
-                    <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
-                    <span>Ismael Cerezo</span>
-                </div>
-                <div class="position">
-                    <p>
-                        CEO / DIRECTOR MÉDICO <br>
-                        FUNDADOR DE CLÍNICAS CLEARDENT
-                    </p>
-                </div>
-                <div class="line">
-
-                </div>
-            </div>
-            <div class="expert">
-                <div class="card">
-                    <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
-                    <span>Ismael Cerezo</span>
-                </div>
-                <div class="position">
-                    <p>
-                        CEO / DIRECTOR MÉDICO <br>
-                        FUNDADOR DE CLÍNICAS CLEARDENT
-                    </p>
-                </div>
-                <div class="line">
-
-                </div>
-            </div>
+            <Expert/>
+            <Expert/>
+            <Expert/>
+            <Expert/>
+            <Expert/>
+            <Expert/>
         </div>
     </div>
 </div>
@@ -129,14 +48,6 @@ import Image from "astro/components/Image.astro";
         /* margin: 100px; */
     }
 
-    /* .titulos{
-        display: grid;
-        grid-template-columns: 60% 40%;
-        height: 10%;
-        position: relative;
-        padding-bottom: 5%;
-    } */
-
     .titulos{
         display: flex;
         flex-direction: row;
@@ -156,58 +67,6 @@ import Image from "astro/components/Image.astro";
 
     .titulos>div{
         width: 35%;
-    }
-
-    /* .titulos:first-child{
-        width: 40%;
-    } */
-
-    /* .titulos:last-child{
-        width: 60%;
-    } */
-
-    .expert{
-        width: 33%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .card{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        /* background: rgb(42,61,67);
-        background: linear-gradient(180deg, rgba(42,61,67,0.499124649859944) 0%, rgba(19,41,49,1) 100%); */
-        /* background: linear-gradient(270deg, rgb(42,61,67 / .1) 0%, rgb(19,41,49 / 1) 100%); */
-        /* background: linear-gradient(180deg, rgba(42, 61, 67, 0%), rgba(19, 41, 49, 50%)); */
-        background: linear-gradient(0deg,   rgba(42, 61, 67, 100%), transparent 50%);
-        border-bottom-right-radius: 38px;
-        border-bottom-left-radius: 38px;
-        font-weight: bolder;
-    }
-
-    .card span{
-        color: rgb(179, 178, 178);
-        padding: 10px;
-        font-weight: bolder;
-        font-size: larger;
-        font-variant-caps: all-small-caps;
-    }
-
-    .position{
-        font-size: small;
-        text-align: center;
-        color: rgb(70, 186, 184);
-        padding: 10px;
-    }
-
-    .line{
-        height: 1px;
-        background-color: rgb(173, 173, 173);
-        width: 50px;
-        margin-bottom: 10px;
     }
 
     .dental{
@@ -234,5 +93,4 @@ import Image from "astro/components/Image.astro";
     h1 span{
         color: rgb(70, 186, 184);
     }
-
 </style>
