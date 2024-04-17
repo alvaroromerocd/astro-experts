@@ -81,13 +81,13 @@ import Expert from "./Expert.astro";
     } */
 
     .dental{
-        width: 25em;
+        width: 20em;
         /* height: 2em; */
         text-align: center;
     }
     
     .learn{
-        width: 25em;
+        width: 20em;
         /* text-align: center; */
         /* height: 2em; */
     }
@@ -124,7 +124,7 @@ import Expert from "./Expert.astro";
         color: rgb(70, 186, 184);
     }
 
-    @media (width <= 1000px){
+    @media (width < 840px){
         h1{
             font-family: 'Druk Wide Bold', sans-serif;
             font-size:2em;
@@ -158,25 +158,11 @@ import Expert from "./Expert.astro";
 
     @media (width < 450px){
         h1{
-            font-family: 'Druk Wide Bold', sans-serif;
+            /* font-family: 'Druk Wide Bold', sans-serif; */
             font-size:1.5em;
-            color: rgb(240, 240, 240);
-        }
-
-        .titulos>div:nth-child(2){
-            display: flex;
-            flex-direction: row;      
-        }
-
-        .titulos>div:nth-child(2) h2{
-            /* position: absolute; */
-            bottom: 5px;
-            color: rgb(70, 186, 184);
-            display: flex;
-            text-align: start;
-            align-items: start;
-            /* hyphens: auto; */
+            /* color: rgb(240, 240, 240); */
         }
 
     }
+
 </style>
