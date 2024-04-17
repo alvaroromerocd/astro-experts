@@ -5,7 +5,7 @@ import Expert from "./Expert.astro";
 <div id="experts-section">
     <div class="experts-section-background">
         <div class="titulos">
-            <div>
+            <div class="learn">
                 <h1>APRENDE DE LOS <span>MEJORES EXPERTOS</span></h1>
             </div>
             <div class="dental">
@@ -22,7 +22,6 @@ import Expert from "./Expert.astro";
             <Expert image="/images/Fernando-Jimenez-Auren.png" name="Fernando Jiménez" position="SOCIO DEPARTAMENTO FISCAL AUREN STARTUPS 360"/>
             <Expert image="/images/Álvaro Sánchez.png" name="Álvaro Sánchez" position="CEO DENARIUS FINANCE"/>
             <Expert image="/images/01_SINFONDO.webp" name="Laura" position="CEO"/>
-            
         </div>
     </div>
 </div>
@@ -44,23 +43,56 @@ import Expert from "./Expert.astro";
     .titulos{
         display: flex;
         flex-direction: row;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
         justify-content:space-around;
-        height: 10%;
-        position: relative;
+        height: 100%;
+        /* position: relative; */
         padding-bottom: 1em;
+        /* hyphens: auto; */
     }
 
     .images{
         display: flex;
         flex-wrap: wrap;
         height: 100%;
+        justify-content: center;
     }
 
-    .titulos>div{
-        width: 35%;
+    /* .titulos>div:first-child{
+        width: 50%;
     }
+
+    .titulos>div:last-child{
+        width: 50%;
+    } */
+
+    .titulos>div:nth-child(2){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    /* .titulos>div:nth-child(2) h2{
+        bottom: 5px;
+        color: rgb(70, 186, 184);
+        display: flex;
+        text-align: end;
+        align-items: end;
+    } */
 
     .dental{
+        width: 25em;
+        /* height: 2em; */
+        text-align: center;
+    }
+    
+    .learn{
+        width: 25em;
+        /* text-align: center; */
+        /* height: 2em; */
+    }
+
+    /* .dental{
         display: flex;
         flex-direction: row-reverse;
     }
@@ -71,20 +103,80 @@ import Expert from "./Expert.astro";
         color: rgb(70, 186, 184);
         display: flex;
         text-align: end;
+    } */
+
+    .titulos>div:nth-child(2){
+        display: flex;
+        flex-direction: row-reverse;        
     }
 
-    h1{
-        font-family: 'Druk Wide Bold', sans-serif;
-        font-size:2em;
-        color: rgb(240, 240, 240);
-
+    .titulos>div:nth-child(2) h2{
+        /* position: absolute; */
+        bottom: 5px;
+        color: rgb(70, 186, 184);
+        display: flex;
+        text-align: end;
+        align-items: end;
+        /* hyphens: auto; */
     }
 
     h1 span{
         color: rgb(70, 186, 184);
     }
 
-    .images:nth-child(0){
-        background: linear-gradient(0deg,   rgb(29, 174, 218), transparent 50%);
+    @media (width <= 1000px){
+        h1{
+            font-family: 'Druk Wide Bold', sans-serif;
+            font-size:2em;
+            color: rgb(240, 240, 240);
+        }
+
+        .titulos>div:nth-child(2){
+            display: flex;
+            flex-direction: row;
+        }
+
+        .titulos>div:nth-child(2) h2{
+            /* position: absolute; */
+            bottom: 5px;
+            color: rgb(70, 186, 184);
+            display: flex;
+            text-align: start;
+            align-items: start;
+            /* hyphens: auto; */
+        }
+    }
+
+    @media (width >= 450px){
+        h1{
+            font-family: 'Druk Wide Bold', sans-serif;
+            font-size:2em;
+            color: rgb(240, 240, 240);
+        }
+
+    }
+
+    @media (width < 450px){
+        h1{
+            font-family: 'Druk Wide Bold', sans-serif;
+            font-size:1.5em;
+            color: rgb(240, 240, 240);
+        }
+
+        .titulos>div:nth-child(2){
+            display: flex;
+            flex-direction: row;      
+        }
+
+        .titulos>div:nth-child(2) h2{
+            /* position: absolute; */
+            bottom: 5px;
+            color: rgb(70, 186, 184);
+            display: flex;
+            text-align: start;
+            align-items: start;
+            /* hyphens: auto; */
+        }
+
     }
 </style>
