@@ -1,16 +1,24 @@
 ---
-import Image from "astro/components/Image.astro"
+import Image from "astro/components/Image.astro";
+interface Props {
+    image: string;
+    name: string;
+    position: string;
+}
+
+const {image, name, position} = Astro.props
 ---
 
 <div class="expert">
     <div class="card">
-        <Image src="/images/01_SINFONDO.webp" alt="Experto" width="200" height="200"/>
-        <span>Ismael Cerezo</span>
+        <Image src={image} alt="Experto" width="200" height="200" loading="lazy" decoding="async" />
+        <span>
+            {name}
+        </span>
     </div>
     <div class="position">
         <p>
-            CEO / DIRECTOR MÉDICO <br>
-            FUNDADOR DE CLÍNICAS CLEARDENT
+            {position}
         </p>
     </div>
     <div class="line">

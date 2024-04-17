@@ -1,8 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
-import { lazy } from "astro/zod";
 import Expert from "./Expert.astro";
-const { position = ["CEO / Director Médico <br> Fundador Clínicas ClearDent","CEO / Director Médico <br> Fundador Clínicas ClearDent","CEO / Director Médico <br> Fundador Clínicas ClearDent","CEO / Director Médico <br> Fundador Clínicas ClearDent","CEO / Director Médico <br> Fundador Clínicas ClearDent",""], name = ["Ismael Cerezo", "Jose Quesada", "Guillermo del Pino", "Fernando Jiménez", "Álvaro Sánchez", "Y más ponentes sorpresa referentes del ámbito odontológico y empresarial"] } = Astro.props;
 ---
 
 <div id="experts-section">
@@ -19,12 +16,13 @@ const { position = ["CEO / Director Médico <br> Fundador Clínicas ClearDent","
             </div>
         </div>
         <div class="images">
-            <Expert/>
-            <Expert/>
-            <Expert/>
-            <Expert/>
-            <Expert/>
-            <Expert/>
+            <Expert image="/images/01.png" name="Ismael Cerezo" position="CEO / DIRECTOR MÉDICO FUNDADOR DE CLÍNICAS CLEARDENT"/>
+            <Expert image="/images/jose.webp" name="Jose Quesada" position="DIRECTOR DE DESARROLLO DE NEGOCIO / REV OPS CLÍNICAS CLEARDENT"/>
+            <Expert image="/images/guille.webp" name="Guillermo del Pino" position="DIRECTOR DE MARKETING / HEAD OF SEO CLÍNICAS CLEARDENT"/>
+            <Expert image="/images/Fernando-Jimenez-Auren.png" name="Fernando Jiménez" position="SOCIO DEPARTAMENTO FISCAL AUREN STARTUPS 360"/>
+            <Expert image="/images/Álvaro Sánchez.png" name="Álvaro Sánchez" position="CEO DENARIUS FINANCE"/>
+            <Expert image="/images/01_SINFONDO.webp" name="Laura" position="CEO"/>
+            
         </div>
     </div>
 </div>
@@ -32,20 +30,15 @@ const { position = ["CEO / Director Médico <br> Fundador Clínicas ClearDent","
     @import url('https://fonts.cdnfonts.com/css/druk-wide-bold');
     #experts-section{
         width: 100vw;
-        height: 100vh;
         background-color: rgb(0, 0, 0);
-        /* max-width: 100vh; */
         position: relative;
     }
 
     .experts-section-background{
-        /* height: 100%; */
         height: auto;
-        /* background: rgb(16,24,34); */
         background: linear-gradient(rgba(16,24,34,1), rgba(3,5,11,1));
         border-radius: 48px;
         padding: 100px;
-        /* margin: 100px; */
     }
 
     .titulos{
@@ -58,8 +51,6 @@ const { position = ["CEO / Director Médico <br> Fundador Clínicas ClearDent","
     }
 
     .images{
-        /* display: grid;
-        grid-template-columns: 30% 30% 30%; */
         display: flex;
         flex-wrap: wrap;
         height: 100%;
@@ -72,7 +63,6 @@ const { position = ["CEO / Director Médico <br> Fundador Clínicas ClearDent","
     .dental{
         display: flex;
         flex-direction: row-reverse;
-        /* position: relative; */
     }
 
     .dental h2{
@@ -92,5 +82,9 @@ const { position = ["CEO / Director Médico <br> Fundador Clínicas ClearDent","
 
     h1 span{
         color: rgb(70, 186, 184);
+    }
+
+    .images:nth-child(0){
+        background: linear-gradient(0deg,   rgb(29, 174, 218), transparent 50%);
     }
 </style>
